@@ -5,6 +5,7 @@ const nextConfig = {
 
 module.exports = {
   ...nextConfig,
+  exportPathMap: true,
   images: {
     domains: [
       "links.papareact.com",

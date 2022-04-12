@@ -20,7 +20,6 @@ import { db } from "../firebase/firestore";
 export default function Home(props) {
   const { userSession, postsList } = props;
   if (!userSession) return <Login />;
-  console.log("home post", postsList);
 
   return (
     <div className="h-screen bg-gray-100 overflow-hidden">
@@ -57,8 +56,6 @@ export async function getServerSideProps(context) {
     ...post.data(),
     timeStamp: null,
   }));
-
-  console.log("server props", getAllPosts);
 
   return {
     props: {
